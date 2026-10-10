@@ -15,7 +15,7 @@ st.title("📊 Retest CSV Commonality Analysis Tool")
 # -------------------------
 
 uploaded_files = st.file_uploader(
-    "Upload CSV File(s)---------------------------$ Developed by: Phani Kumar | Contact for better improvement",
+    "Upload CSV File(s)--------(Download Retest SN from Insight)-------------------$ Developed by: Phani Kumar | Contact for better improvement",
     type=["csv"],
     accept_multiple_files=True
 )
