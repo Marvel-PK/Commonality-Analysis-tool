@@ -8,7 +8,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("📊 CSV Commonality Analysis Tool")
+st.title("📊 Retest CSV Commonality Analysis Tool")
 
 # -------------------------
 # Upload
