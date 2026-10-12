@@ -1,2 +1,7 @@
 plotly
 pandas
+openpyxl
+numpy
+matplotlib
+seaborn
+xlsxwriter
