@@ -389,7 +389,7 @@ fig_heatmap = px.imshow(
     labels={
         "x": "Test Head ID",
         "y": "Station ID",
-        "color": "Failure Count"
+        "color": "Retest Count"
     }
 )
 
