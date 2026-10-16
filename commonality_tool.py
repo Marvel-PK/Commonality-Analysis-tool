@@ -303,7 +303,7 @@ failure_options = ["ALL"] + sorted(
 )
 
 selected_failure = st.selectbox(
-    "Select Failure for Heatmap",
+    "Select Retest Symptom for Heatmap",
     failure_options
 )
 
