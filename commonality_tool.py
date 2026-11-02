@@ -155,6 +155,7 @@ commonality_fields = st.sidebar.multiselect(
         "Test Head ID",
         "Test Software Version",
         "Station Type"
+        "Start Time"
     ]
 )
 
