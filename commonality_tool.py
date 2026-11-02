@@ -49,7 +49,8 @@ text_cols = [
     "Test Software Version",
     "Station Type",
     "Test Head ID",
-    "Product Code"
+    "Product Code",
+    "Start Time"
 ]
 
 for col in text_cols:
@@ -154,7 +155,7 @@ commonality_fields = st.sidebar.multiselect(
         "Fixture ID",
         "Test Head ID",
         "Test Software Version",
-        "Station Type"
+        "Station Type",
         "Start Time"
     ]
 )
