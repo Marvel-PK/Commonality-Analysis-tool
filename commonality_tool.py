@@ -318,9 +318,14 @@ if "ALL" in selected_failure:
 
 else:
 
-    st.info(
-        f"Showing {len(selected_failure)} selected symptoms"
+    st.success(
+        f"{len(selected_failure)} symptom(s) selected"
     )
+
+    with st.expander("View Selected Symptoms"):
+
+        for symptom in selected_failure:
+            st.write(f"• {symptom}")
 
 # -------------------------
 # Build Dataset
