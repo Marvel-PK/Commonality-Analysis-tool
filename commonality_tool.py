@@ -309,6 +309,18 @@ selected_failure = st.multiselect(
     failure_options,
     default=["ALL"]
 )
+if "ALL" in selected_failure:
+
+    st.info(
+        f"Showing ALL Retest Symptoms "
+        f"({data['Retest Symptoms'].nunique()} types)"
+    )
+
+else:
+
+    st.info(
+        f"Showing {len(selected_failure)} selected symptoms"
+    )
 
 # -------------------------
 # Build Dataset
