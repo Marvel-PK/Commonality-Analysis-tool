@@ -314,27 +314,25 @@ selected_failure = st.multiselect(
 # Build Dataset
 # -------------------------
 
-if selected_failure == "ALL":
+if "ALL" in selected_failure:
 
-    hm = (
-        data.groupby(
-            ["Station ID", "Test Head ID"]
-        )
-        .size()
-        .reset_index(name="Count")
-    )
+    filtered_data = data
 
 else:
 
-    hm = (
-        data[data["Retest Symptoms"] == selected_failure]
-        .groupby(
-            ["Station ID", "Test Head ID"]
+    filtered_data = data[
+        data["Retest Symptoms"].isin(
+            selected_failure
         )
-        .size()
-        .reset_index(name="Count")
-    )
+    ]
 
+hm = (
+    filtered_data.groupby(
+        ["Station ID", "Test Head ID"]
+    )
+    .size()
+    .reset_index(name="Count")
+)
 # -------------------------
 # Create Pivot
 # -------------------------
