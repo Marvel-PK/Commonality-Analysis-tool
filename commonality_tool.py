@@ -304,9 +304,10 @@ failure_options = ["ALL"] + sorted(
     data["Retest Symptoms"].unique()
 )
 
-selected_failure = st.selectbox(
+selected_failure = st.multiselect(
     "Select Retest Symptom for Heatmap",
-    failure_options
+    failure_options,
+    default=["ALL"]
 )
 
 # -------------------------
