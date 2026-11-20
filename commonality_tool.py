@@ -197,7 +197,9 @@ with col4:
 # Retest Pareto
 # -------------------------
 
-st.subheader("Retest Pareto")
+#st.subheader("Retest Pareto")
+st.subheader(f"Retest Pareto ({cutoff_text})")
+#f"Select Retest Symptom for Heatmap ({cutoff_text})",
 
 pareto = (
     data.groupby("Retest Symptoms")
