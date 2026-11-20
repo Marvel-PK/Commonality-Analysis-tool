@@ -198,6 +198,7 @@ with col4:
 # -------------------------
 
 st.subheader("Retest Pareto")
+
 pareto = (
     data.groupby("Retest Symptoms")
     .size()
@@ -298,6 +299,25 @@ else:
 # -------------------------
 
 st.subheader("Heatmap - Failure vs Station vs Test Head")
+# Get Cutoff Range from Start Time
+
+data["Start Time"] = pd.to_datetime(
+    data["Start Time"],
+    errors="coerce"
+)
+
+start_cutoff = data["Start Time"].min()
+end_cutoff = data["Start Time"].max()
+
+cutoff_text = (
+    f"Cut Off "
+    f"{start_cutoff.strftime('%m/%d %I:%M%p')} ~ "
+    f"{end_cutoff.strftime('%m/%d %I:%M%p')}"
+)
+
+failure_options = ["ALL"] + sorted(
+    data["Retest Symptoms"].unique()
+)
 
 selected_failure = st.multiselect(
     f"Select Retest Symptom for Heatmap ({cutoff_text})",
